@@ -22,8 +22,10 @@ You can also set it to random by uncommenting the code
 To run each of the code you need a gcc compiler.
 All of these programs are tested in Ubuntu 16.04 and Windows 10
 
-to run any program use 
+to run divideandconquer.c program use 
 gcc filename.c
+to run rest use 
+gcc -fopenmp filename.c
 
 The fastest programs in this folder is parallelwithcacheopt.c
 
