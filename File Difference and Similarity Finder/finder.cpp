@@ -126,19 +126,19 @@ int main(int argc,char *argv[])
 		cout<<diff1<<"c"<<diff2<<"\n";
 		for(i=0;i<differfile1.size();i++)
 		{	
-		//	cout<<"< "<<differfile1[i].line<<"  :"<<differfile1[i].lineno<<"\n";
+			cout<<"< "<<differfile1[i].line<<"  :"<<differfile1[i].lineno<<"\n";
 		}
 		cout<<"-----------------------------------------------------------------------\n";
 		for(i=0;i<differfile2.size();i++)
 		{	
-		//	cout<<"> "<<differfile2[i].line<<"  :"<<differfile2[i].lineno<<"\n";
+			cout<<"> "<<differfile2[i].line<<"  :"<<differfile2[i].lineno<<"\n";
 		}
 	}
 	if(same.size()>0)
 		cout<< "***********************************************************************\nThese lines are same\n";
 	for(i=0;i<same.size();i++)
 	{	
-	//	cout<<same[i].line<<"  :"<<same[i].lineno<<"\n";
+		cout<<same[i].line<<"  :"<<same[i].lineno<<"\n";
 	}
 	if(same.size()>0)
 		cout<< "***********************************************************************\n" ;
