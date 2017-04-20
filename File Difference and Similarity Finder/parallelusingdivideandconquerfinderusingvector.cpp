@@ -8,6 +8,7 @@
 double cpu_time_used;
 struct timeval start, end;
 /*
+	*** HAS A BUG*********
 	****Author:Bharath****
 	****Utility:File Differtiator****
 	****Abstract:Gives what lines in a file are same and what lines are different!****
