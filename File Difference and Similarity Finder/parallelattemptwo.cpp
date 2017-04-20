@@ -38,7 +38,7 @@ void getSameDiff(vector<string> filec1,long long int &dif1,vector<string> filec2
 		start = end;
 		end = temp;
 	}
-	if(end-start<=1000)
+	if(end-start<=100000)
 	{
 		long long int diff1=0;
 		long long int diff2=0;
