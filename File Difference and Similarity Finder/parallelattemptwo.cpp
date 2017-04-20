@@ -8,6 +8,7 @@
 double cpu_time_used;
 struct timeval start, end;
 /*
+	*** UNDER TESTING ***
 	****Author:Bharath****
 	****Utility:File Differtiator****
 	****Abstract:Gives what lines in a file are same and what lines are different!****
@@ -104,9 +105,9 @@ void getSameDiff(vector<string> filec1,long long int &dif1,vector<string> filec2
 			}
 			#pragma omp section
 			{
-				for(i=0;i<differfile12.size();i++)
+				for(i=0;i<differfile21.size();i++)
 				{	
-					difffile2.push_back(differfile12[i]);
+					difffile2.push_back(differfile21[i]);
 				}
 			}
 			#pragma omp section
@@ -197,25 +198,25 @@ int main(int argc,char *argv[])
 		cout<<differfile1.size()+(filec1.size()>filec2.size()?filec1.size()-filec2.size():0)<<"c"<<differfile2.size()+(filec1.size()>filec2.size()?0:filec2.size()-filec1.size())<<"\n";
 		for(i=0;i<differfile1.size();i++)
 		{	
-		//	cout<<"< "<<differfile1[i].line<<"  :"<<differfile1[i].lineno<<"\n";
+			cout<<"< "<<differfile1[i].line<<"  :"<<differfile1[i].lineno<<"\n";
 		}
 		if(filec1.size()>filec2.size())
 		{
 			for(i=filec2.size();i<filec1.size();i++)
 			{
-			//	cout<<"< "<<filec1[i]<<"  :"<<(i+1)<<"\n";			
+				cout<<"< "<<filec1[i]<<"  :"<<(i+1)<<"\n";			
 			}
 		}
 		cout<<"-----------------------------------------------------------------------\n";
 		for(i=0;i<differfile2.size();i++)
 		{	
-		//	cout<<"> "<<differfile2[i].line<<"  :"<<differfile2[i].lineno<<"\n";
+			cout<<"> "<<differfile2[i].line<<"  :"<<differfile2[i].lineno<<"\n";
 		}
 		if(filec2.size()>filec1.size())
 		{
 			for(i=filec1.size();i<filec2.size();i++)
 			{
-			//	cout<<"< "<<filec2[i]<<"  :"<<(i+1)<<"\n";			
+				cout<<"< "<<filec2[i]<<"  :"<<(i+1)<<"\n";			
 			}
 		}
 	}
@@ -226,7 +227,7 @@ int main(int argc,char *argv[])
 		int i;		
 		for(i=0;i<same.size();i++)
 		{
-		//	cout<<same[i].line<<"  :"<<same[i].lineno<<"\n";
+			cout<<same[i].line<<"  :"<<same[i].lineno<<"\n";
 		}
 		cout<< "***********************************************************************\n" ;
 	}
